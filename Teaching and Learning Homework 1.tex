@@ -1,0 +1,200 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}    % need for subequations
+\usepackage{graphicx}   % need for figures
+\usepackage{verbatim}   % useful for program listings
+\usepackage{color}      % use if color is used in text
+\usepackage{subfigure}  % use for side-by-side figures
+\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+\usepackage{setspace}
+\usepackage{natbib}
+\usepackage{calligra}
+\setlength{\baselineskip}{10.0pt}    % 16 pt usual spacing between lines
+\setlength{\topmargin}{-0.5in}
+\setlength{\parskip}{3pt plus 2pt}
+\setlength{\parindent}{20pt}
+\setlength{\oddsidemargin}{0.5cm}
+\setlength{\evensidemargin}{0.5cm}
+\setlength{\marginparsep}{0.75cm}
+\setlength{\marginparwidth}{2.5cm}
+\setlength{\marginparpush}{1.0cm}
+\setlength{\textwidth}{150mm}
+\setlength{\footskip}{0.5cm}
+\addtolength{\textheight}{1.2in}
+
+\usepackage{calligra}
+
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scripty}[1]{\ensuremath{\mathcalligra{#1}}}
+
+
+
+
+% Bibliography and bibfile
+\def\aj{AJ}%
+          % Astronomical Journal
+\def\actaa{Acta Astron.}%
+          % Acta Astronomica
+\def\araa{ARA\&A}%
+          % Annual Review of Astron and Astrophys
+\def\apj{ApJ}%
+          % Astrophysical Journal
+\def\apjl{ApJ}%
+          % Astrophysical Journal, Letters
+\def\apjs{ApJS}%
+          % Astrophysical Journal, Supplement
+\def\ao{Appl.~Opt.}%
+          % Applied Optics
+\def\apss{Ap\&SS}%
+          % Astrophysics and Space Science
+\def\aap{A\&A}%
+          % Astronomy and Astrophysics
+\def\aapr{A\&A~Rev.}%
+          % Astronomy and Astrophysics Reviews
+\def\aaps{A\&AS}%
+          % Astronomy and Astrophysics, Supplement
+\def\azh{AZh}%
+          % Astronomicheskii Zhurnal
+\def\baas{BAAS}%
+          % Bulletin of the AAS
+\def\bac{Bull. astr. Inst. Czechosl.}%
+          % Bulletin of the Astronomical Institutes of Czechoslovakia 
+\def\caa{Chinese Astron. Astrophys.}%
+          % Chinese Astronomy and Astrophysics
+\def\cjaa{Chinese J. Astron. Astrophys.}%
+          % Chinese Journal of Astronomy and Astrophysics
+\def\icarus{Icarus}%
+          % Icarus
+\def\jcap{J. Cosmology Astropart. Phys.}%
+          % Journal of Cosmology and Astroparticle Physics
+\def\jrasc{JRASC}%
+          % Journal of the RAS of Canada
+\def\mnras{MNRAS}%
+          % Monthly Notices of the RAS
+\def\memras{MmRAS}%
+          % Memoirs of the RAS
+\def\na{New A}%
+          % New Astronomy
+\def\nar{New A Rev.}%
+          % New Astronomy Review
+\def\pasa{PASA}%
+          % Publications of the Astron. Soc. of Australia
+\def\pra{Phys.~Rev.~A}%
+          % Physical Review A: General Physics
+\def\prb{Phys.~Rev.~B}%
+          % Physical Review B: Solid State
+\def\prc{Phys.~Rev.~C}%
+          % Physical Review C
+\def\prd{Phys.~Rev.~D}%
+          % Physical Review D
+\def\pre{Phys.~Rev.~E}%
+          % Physical Review E
+\def\prl{Phys.~Rev.~Lett.}%
+          % Physical Review Letters
+\def\pasp{PASP}%
+          % Publications of the ASP
+\def\pasj{PASJ}%
+          % Publications of the ASJ
+\def\qjras{QJRAS}%
+          % Quarterly Journal of the RAS
+\def\rmxaa{Rev. Mexicana Astron. Astrofis.}%
+          % Revista Mexicana de Astronomia y Astrofisica
+\def\skytel{S\&T}%
+          % Sky and Telescope
+\def\solphys{Sol.~Phys.}%
+          % Solar Physics
+\def\sovast{Soviet~Ast.}%
+          % Soviet Astronomy
+\def\ssr{Space~Sci.~Rev.}%
+          % Space Science Reviews
+\def\zap{ZAp}%
+          % Zeitschrift fuer Astrophysik
+\def\nat{Nature}%
+          % Nature
+\def\iaucirc{IAU~Circ.}%
+          % IAU Cirulars
+\def\aplett{Astrophys.~Lett.}%
+          % Astrophysics Letters
+\def\apspr{Astrophys.~Space~Phys.~Res.}%
+          % Astrophysics Space Physics Research
+\def\bain{Bull.~Astron.~Inst.~Netherlands}%
+          % Bulletin Astronomical Institute of the Netherlands
+\def\fcp{Fund.~Cosmic~Phys.}%
+          % Fundamental Cosmic Physics
+\def\gca{Geochim.~Cosmochim.~Acta}%
+          % Geochimica Cosmochimica Acta
+\def\grl{Geophys.~Res.~Lett.}%
+          % Geophysics Research Letters
+\def\jcp{J.~Chem.~Phys.}%
+          % Journal of Chemical Physics
+\def\jgr{J.~Geophys.~Res.}%
+          % Journal of Geophysics Research
+\def\jqsrt{J.~Quant.~Spec.~Radiat.~Transf.}%
+          % Journal of Quantitiative Spectroscopy and Radiative Trasfer
+\def\memsai{Mem.~Soc.~Astron.~Italiana}%
+          % Mem. Societa Astronomica Italiana
+\def\nphysa{Nucl.~Phys.~A}%
+          % Nuclear Physics A
+\def\physrep{Phys.~Rep.}%
+          % Physics Reports
+\def\physscr{Phys.~Scr}%
+          % Physica Scripta
+\def\planss{Planet.~Space~Sci.}%
+          % Planetary Space Science
+\def\procspie{Proc.~SPIE}%
+          % Proceedings of the SPIE
+          
+          
+\newcommand{\adv}{    {\it Advances in Space Research}}
+\newcommand{\annG}{   {\it Annales Geophysicae}}
+\newcommand{\aap}{    {\it Astronomy \& Astrophysics}}
+\newcommand{\aaps}{   {\it Astronomy \& Astrophysics Supplemental}}
+\newcommand{\aapr}{   {\it Astronomy \& Astrophysics Review}}
+\newcommand{\ag}{     {\it Ann. Geophys.}}
+\newcommand{\aj}{     {\it Astronomical Journal}}
+\newcommand{\apj}{    {\it Astrophysical Journal}}
+\newcommand{\apjs}{    {\it Astrophysical Journal Supplemental Series}}
+\newcommand{\apjl}{   {\it Astrophysical Journal Letters}}
+\newcommand{\apss}{   {\it Astrophysics \& Space Science}}
+\newcommand{\cjaa}{   {\it Chinese Journal Astronomy \& Astrophysics}}
+\newcommand{\gafd}{   {\it Geophysical and Astrophysical Fluid Dynamics}}
+\newcommand{\grl}{    {\it Geophysical Research Letters}}
+\newcommand{\ijga}{   {\it International Journal of Geomagnetism and Aeronomy}}
+\newcommand{\jastp}{  {\it Journal of Atmospheric and Solar-Terrestrial Physics}}
+\newcommand{\jgr}{    {\it Journal of Geophysical Research}}
+\newcommand{\mnras}{  {\it Monthly Notices of the Royal Astronomical Society}}
+\newcommand{\nat}{    {\it Nature}}
+\newcommand{\pasp}{   {\it Publications of the Astronomical Society of the Pacific}}
+\newcommand{\pasj}{   {\it Publications of the Astronomical Society of Japan}}
+\newcommand{\pra}{    {\it Physical Review A}}
+\newcommand{\pre}{    {\it Physical Review E}}
+\newcommand{\solphys}{{\it Solar Physics}}
+\newcommand{\sovast}{ {\it Soviet Astronomy}}
+\newcommand{\ssr}{    {\it Space Science Reviews}}
+\newcommand{\araa}{  {\it Annual Review of Astronomy \& Astrophysics}}
+\newcommand{\memsai}{ {\it Memorie della Societa Astronomia Italiana}}
+\newcommand{\zap}{ {\it Zeitschrift fur Astrophysik}}
+\newcommand{\bain}{ {\it Bulletin of the Astronomical Institutes of the Netherlands}}
+\newcommand{\planss}{ {\it Planet.~Space~Sci.}}%
+
+
+\begin{document}
+
+\begin{titlepage}
+   \vspace*{\stretch{1.0}}
+   \begin{center}
+      \Large\textbf{Response to ``Six Ways to Discourage Learning" - by Douglas Duncan and Amy Singel Southon}\\
+      \large\textit{Lauren Mc Keown}
+   \end{center}
+   \vspace*{\stretch{2.0}}
+\end{titlepage}
+
+
+Having read this paper, a few interesting concepts struck me and caused me to ponder the strong points and weak points of my own undergraduate education. Firstly, I agree that the concept of providing sufficient ``wait time" for thinking before verbally responding to a question is crucial to the assimilation of information. I thoroughly support Duncan and Southon's point that we should invite the student to \emph{process} what we have related to them in class. In addition, I like the concept of avoiding ``non - specific feedback questions". From my experience of lazy lecturers simply glossing over student difficulties by quickly asking ``any questions?", I found myself immune to absorbing information \emph{in the class}, let alone formulating a question in my head. This led to the majority of my learning/question-formation happening in the library when I was studying class material. I used to then write down all the questions I had about the content of the course slides, and later arrange to meet lecturers to go through the difficulties I had. If lecturers had simply created a more inviting environment in which to take questions, I would have saved much time that could have been spent revising these concepts, rather than being reminded that I didn't understand them before exams. Furthermore, I agree with Duncan and Southon that "sharing the concept" of wait time could help students to know that the lecturer does really want to aid the thought process and they should not be afraid to admit when they do not understand.
+
+In terms of the discussion of the ``rapid reward" method of bad teaching, I was reminded of one student in my class that was allowed to answer absolutely every question posed to us (and could, because he had already pre - read the lecture slides). This dynamic between teacher and one sole student should not exist, as everyone else feels left out of the discussion once the teacher says ``right answer". I do agree that encouraging student - to student dialogue on the topic, followed by a question and answer session, is an excellent method of getting everyone involved. When the peer - to - peer session is initiated, I also think it important that the question is not phrased in the ``programmed answer" format. We need to allow the students to \emph{begin} the answer formulation process with their own initial thoughts - not those of the lecturer. In addition, we need to pay attention to the levels of questions we are asking and I agree with the authors when they suggest structuring class questions around analysis and synthesis of concepts, rather than asking for a rote - learned answer.
+
+Following from this, I understand what the authors are saying when they note that some students may be too confused or intimidated to brave answering questions in class. Hence, lecturers need to acquire the knowledge that not everyone comes from the same subject background in their class. Perhaps mentioning this to the students at the beginning of term might allow them to feel more comfortable in admitting that they do not fully understand a question or topic. Furthermore, in terms of ``teacher's ego - stroking and classroom climate", I think that how a teacher views his or her students in relation to themself, governs the outcome of a students learning. The most successful lecturers I know are renowned for their approach of ``coming down to the level of the student". As the authors show, students do need to feel safe enough to be wrong. In fact - admission of being wrong should be \emph{encouraged}, as we need to first know the wrong answer, to find out the right answer...which is exactly what this paper was all about!
+
+\end{document}
+
